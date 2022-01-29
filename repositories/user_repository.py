@@ -26,4 +26,16 @@ def select_by_id(id):
     row = result[0]
     return User(row['first_name'], row['last_name'], row['id'])
 
-def 
+def delete_all():
+    sql = "DELETE FROM users"
+    run_sql(sql)
+
+def update(user):
+    sql = "UPDATE users SET (first_name, last_name) = (%s, %s) WHERE id = %s"
+    values = [user.first_name, user.last_name, user.id]
+    run_sql(sql, values)
+
+def delete(id):
+    sql = "DELETE  FROM users WHERE id = %s"
+    values = [id]
+    run_sql(sql, values)

@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <form action="/users" method="POST">
+        <div>
+        <label for="first_name">First name:</label>
+        <input type="text" id="first_name" name="first_name" placeholder="First name" required autofocus>
+        </div>
+        <div>
+            <label for="last_name">Last name:</label>
+            <input type="text" id="last_name" name="last_name" placeholder="Last name">
+            </div>
+        <button type="submit">Add user</button>
+    </div>
+    </form>
+
+
+{% endblock %}
