@@ -10,7 +10,10 @@ from models.user import User
 
 users = user_repository.select_all()
 
-for user in users:
-    print(user)
+#for user in users:
+#    print(user)
+
+user = user_repository.select_by_id(9)
+print(user)
 
 pdb.set_trace()

@@ -19,6 +19,11 @@ def select_all():
         users.append(user)
     return users
 
-def select(id):
+def select_by_id(id):
     user = None
     sql = "SELECT * FROM users WHERE id= %s"
+    result = run_sql(sql, [id])
+    row = result[0]
+    return User(row['first_name'], row['last_name'], row['id'])
+
+def 
