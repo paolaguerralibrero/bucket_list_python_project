@@ -2,11 +2,11 @@
 
 {% block content %}
 
-{% for user in all_users %}
-<div class="users">
+{% for country in countries %}
+<div class="countries">
     <div class="content">
       <div class="description">
-        <a href="/users/{{user.id}}">{{user.first_name + " " + user.last_name}}</a>
+        <a href="/users/{{user.id}}">{{country.name}}</a>
       </div>
       
       <div class="buttons">
@@ -19,8 +19,8 @@
 {% endfor %}
 
 <div class="buttons">
-    <form class="delete-form" action="/users/new" method="GET">
-        <button type="submit">Add user</button>
+    <form class="delete-form" action="/countries/new" method="GET">
+        <button type="submit">Add country</button>
     </form>
 </div>
 
