@@ -2,27 +2,48 @@
 
 {% block content %}
 
+<h1>Visited countries:</h1>
 {% for visit in all_visits %}
 {% if visit.visited == True %}
 <div class="countries">
     <div class="content">
-        <h1>Visited countries:</h1>
+        
       <div class="description">
         <p>{{visit.country.name}}</p>
+        <div class="buttons">
+
+                <a href="/visits/{{visit.id}}/{{user.id}}/delete"><button class="trash-button"><i class="fa fa-snowflake-o" style="color: rgb(87, 87, 121)" aria-hidden="true"></i></button></a>
+
+        </div>
+
       </div>
     </div>
   </div>
+  
   {% endif %}
 {% endfor %}
+
+<h1>Add a country you have visited:</h1>
+
+
+<form action="/visits/{{user.id}}" method="post">
+
+<select name="select_country" id="select_country">
+
+
+
+
 {% for country in all_countries %}
 
-<div>
-  <input type="radio" id="{{country.id}}" name="countries" value="{{country.name}}">
-  <label for="{{country.id}}">{{country.name}}</label>
-</div>
+<option value="{{ country.id }}">{{ country.name }}</option>
+
 
 
 {% endfor %}
+</select>
+<input class="btn btn--action" type='submit' value="Visit">
+
+</form>
 
 
 {% endblock %}

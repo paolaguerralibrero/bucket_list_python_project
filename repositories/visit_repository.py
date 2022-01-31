@@ -20,3 +20,8 @@ def show_all(user_id):
         visit = Visit(user, country, row['visited'], row['id'])
         visits.append(visit)
     return visits
+
+def delete(id):
+    sql = "DELETE  FROM visit WHERE id = %s"
+    values = [id]
+    run_sql(sql, values)

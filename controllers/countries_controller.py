@@ -19,7 +19,9 @@ def new_country():
 @countries_blueprint.route("/countries", methods= ['POST'])
 def create_country():
     name = request.form['name']
-    country= Country(name)
+    continent = request.form['continent']
+    flag = request.form['flag']
+    country= Country(name, continent, flag)
     country_repository.save(country)
     return redirect('/countries')
 
