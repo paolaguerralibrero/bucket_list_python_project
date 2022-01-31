@@ -8,6 +8,12 @@
       <div class="description">
         <a href="/countries/{{country.id}}">{{country.name}}</a>
       </div>
+
+      <div class="buttons">
+        <form class="delete-form" action="/countries/{{country.id}}/delete" method="POST">
+            <button class="trash-button"><i class="fa fa-snowflake-o" style="color: rgb(87, 87, 121)" aria-hidden="true"></i></button>
+        </form>
+    </div>
     </div>
   </div>
 {% endfor %}

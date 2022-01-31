@@ -29,3 +29,8 @@ def create_country():
 def show(id):
     country = country_repository.select_by_id(id)
     return render_template("countries/show_country.html", country = country)
+
+@countries_blueprint.route("/countries/<id>/delete", methods= ['POST'])
+def delete_country(id):
+    country_repository.delete(id)
+    return redirect('/countries')

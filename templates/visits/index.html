@@ -11,7 +11,7 @@
       <div class="description">
         <p>{{visit.country.name}}</p>
         <div class="buttons">
-
+            
                 <a href="/visits/{{visit.id}}/{{user.id}}/delete"><button class="trash-button"><i class="fa fa-snowflake-o" style="color: rgb(87, 87, 121)" aria-hidden="true"></i></button></a>
 
         </div>
@@ -26,7 +26,7 @@
 <h1>Add a country you have visited:</h1>
 
 
-<form action="/visits/{{user.id}}" method="post">
+<form action="/visits/{{user.id}}" method="POST">
 
 <select name="select_country" id="select_country">
 
