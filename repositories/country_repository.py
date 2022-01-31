@@ -3,8 +3,8 @@ from db.run_sql import run_sql
 from models.country import Country
 
 def save(country):
-    sql = "INSERT INTO countries (country_name) VALUES (%s) RETURNING *"
-    values = [country.country_name]
+    sql = "INSERT INTO countries (name) VALUES (%s) RETURNING *"
+    values = [country.name]
     results = run_sql(sql, values)
     id = results[0][0]
     country.id = id
@@ -15,7 +15,7 @@ def select_all():
     sql = "SELECT * FROM countries"
     results = run_sql(sql)
     for row in results:
-        user = Country(row['country_name'], row['id'])
+        user = Country(row['name'], row['id'])
         countries.append(user)
     return countries
 
@@ -24,15 +24,15 @@ def select_by_id(id):
     sql = "SELECT * FROM countries WHERE id= %s"
     result = run_sql(sql, [id])
     row = result[0]
-    return Country(row['country_name'], row['id'])
+    return Country(row['name'], row['id'])
 
 def delete_all():
     sql = "DELETE FROM countries"
     run_sql(sql)
 
 def update(country):
-    sql = "UPDATE countries SET (country_name) = (%s) WHERE id = %s"
-    values = [country.country_name, country.id]
+    sql = "UPDATE countries SET (name) = (%s) WHERE id = %s"
+    values = [country.name, country.id]
     run_sql(sql, values)
 
 def delete(id):

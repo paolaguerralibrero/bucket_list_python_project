@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+{% for visit in all_visits %}
+{% if visit.visited == True %}
+<div class="countries">
+    <div class="content">
+        <h1>Visited countries:</h1>
+      <div class="description">
+        <p>{{visit.country.name}}</p>
+      </div>
+    </div>
+  </div>
+  {% endif %}
+{% endfor %}
+{% for country in all_countries %}
+
+<div>
+  <input type="radio" id="{{country.id}}" name="countries" value="{{country.name}}">
+  <label for="{{country.id}}">{{country.name}}</label>
+</div>
+
+
+{% endfor %}
+
+
+{% endblock %}

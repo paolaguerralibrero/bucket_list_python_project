@@ -9,5 +9,12 @@ CREATE TABLE users (
 
 CREATE TABLE countries (
     id SERIAL PRIMARY KEY,
-    country_name VARCHAR(255)
+    name VARCHAR(255)
 );
+
+CREATE TABLE visit (
+    id SERIAL PRIMARY KEY,
+    user_id INT REFERENCES users(id) ON DELETE CASCADE,
+    country_id INT REFERENCES countries(id) ON DELETE CASCADE,
+    visited BOOLEAN
+)

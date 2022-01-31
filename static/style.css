@@ -1,6 +1,9 @@
 body{
     background: url('/static/images/background.jpg');
+    background-position: auto;
     font-family: "Helvetica", arial, sans-serif; font-size: 16px;
+    padding: 0px;
+    margin: 0px;
   }
   
   .users {

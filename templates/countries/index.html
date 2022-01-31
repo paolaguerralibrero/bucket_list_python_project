@@ -2,17 +2,11 @@
 
 {% block content %}
 
-{% for country in countries %}
+{% for country in all_countries %}
 <div class="countries">
     <div class="content">
       <div class="description">
-        <a href="/users/{{user.id}}">{{country.name}}</a>
-      </div>
-      
-      <div class="buttons">
-          <form class="delete-form" action="/users/{{user.id}}/delete" method="POST">
-              <button class="trash-button"><i class="fa fa-snowflake-o" style="color: rgb(87, 87, 121)" aria-hidden="true"></i></button>
-          </form>
+        <a href="/countries/{{country.id}}">{{country.name}}</a>
       </div>
     </div>
   </div>

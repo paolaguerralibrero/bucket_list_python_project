@@ -23,6 +23,6 @@ def create_user():
     return redirect('/users')
 
 @users_blueprint.route("/users/<id>/delete", methods= ['POST'])
-def delete_task(id):
+def delete_user(id):
     user_repository.delete(id)
     return redirect('/users')
