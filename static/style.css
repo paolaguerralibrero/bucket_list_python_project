@@ -1,9 +1,11 @@
 body{
     background: url('/static/images/background.jpg');
     background-size: cover;
-    font-family: "Helvetica", arial, sans-serif; font-size: 16px;
+    font-family: 'Supermercado One', cursive, helvetica;
+    font-size: 16px;
     padding: 0px;
     margin: 0px;
+    background-repeat: no-repeat;
   }
   
   .users {
@@ -88,6 +90,21 @@ body{
     flex-wrap: wrap;
     width: 300px;
     margin: 0 auto;
+    justify-content: center;
+  }
+
+  .homepage-title {
+    color: white;
+    text-transform: uppercase;
+  }
+
+  .homepage-subtitle {
+    font-size: 24px;
+    position: absolute;
+    top: 50%;
+    left: 30%;
+    z-index: 2;
+    color: white;
   }
   
   #flags {
@@ -115,7 +132,6 @@ body{
   .continent{
 
     font-size: 30px;
-    margin-left: 30%;
     text-align: center;
   }
 
@@ -124,5 +140,36 @@ body{
     position: absolute;
     left: 15%;
     top: 20%;
+    opacity: 0.8;
+    z-index: 1;
     
   }
+
+  .users .content,
+  .countries .content{ 
+    display: flex;
+  }
+
+  .users .description,
+  .countries .description {
+    padding-top: 12%;
+  }
+
+  .users .description a,
+  .countries .description a{
+    color: white;
+  }
+
+  .countries .description .edit-country a {
+    color: orange;
+  }
+
+  .add-button {
+    border-radius: 25px;
+  }
+
+  .edit-country {
+    padding-top: 2px;
+  }
+
+  
