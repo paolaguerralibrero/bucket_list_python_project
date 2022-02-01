@@ -32,12 +32,6 @@ body{
     margin-right: 0.3em;
   }
   
-  .duration{
-    color: #8899a6;
-    font-size: 13px;
-    margin-left: 20px;
-  }
-  
   .buttons {
     margin-top: 10px;
     margin-left: 2px;
@@ -70,7 +64,7 @@ body{
   .menu{
     display: flex;
     padding: 10px;
-    background-color: rgb(255, 0, 0);
+    background-color: rgb(194, 129, 129);
     color: white;
   }
   
@@ -125,6 +119,10 @@ body{
     text-align: center;
   }
 
-  .page-header:after{
+  .page-header {
     background-image: url('/static/images/map.jpg');
+    position: absolute;
+    left: 15%;
+    top: 20%;
+    
   }
