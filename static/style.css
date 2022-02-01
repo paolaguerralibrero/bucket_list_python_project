@@ -124,3 +124,7 @@ body{
     margin-left: 30%;
     text-align: center;
   }
+
+  .page-header:after{
+    background-image: url('/static/images/map.jpg');
+  }
