@@ -179,4 +179,7 @@ body{
     color: white;
   }
 
-  
+  .countries .content,
+  .description .visited-country{ 
+    display: flex;
+  }

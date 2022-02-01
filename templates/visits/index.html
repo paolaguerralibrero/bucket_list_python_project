@@ -3,51 +3,34 @@
 
 {% block content %}
 <div class="block-1">
-<h1>{{user.first_name + " " + user.last_name}}</h1>
+<h1>{{user.first_name + " " + user.last_name}}:</h1>
 <h1>Visited countries:</h1>
 {% for visit in all_visits %}
 {% if visit.visited == True %}
 <div class="countries">
     <div class="content">
-        
       <div class="description">
+          <div class="visited-country">
         <p>{{visit.country.name}}</p>
         <div class="buttons">
-            
-                <a href="/visits/{{visit.id}}/{{user.id}}/delete"><button class="trash-button"><i class="fa fa-times" style="color: rgb(216, 59, 11)" aria-hidden="true"></i></button></a>
-
+            <a href="/visits/{{visit.id}}/{{user.id}}/delete"><button class="trash-button"><i class="fa fa-times" style="color: rgb(216, 59, 11)" aria-hidden="true"></i></button></a>
         </div>
-
+        </div>
       </div>
     </div>
   </div>
-  
-  
-  {% endif %}
+{% endif %}
 {% endfor %}
 </div>
 <div class="block-2">
 <h1>Add a country you have visited:</h1>
-
-
 <form action="/visits/{{user.id}}" method="POST">
-
 <select name="select_country" id="select_country">
-
-
-
-
 {% for country in all_countries %}
-
 <option value="{{ country.id }}">{{ country.name }}</option>
-
-
-
 {% endfor %}
 </select>
 <input class="btn btn--action add-button" type='submit' value="Visit">
-
 </form>
 </div>
-
 {% endblock %}
