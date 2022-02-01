@@ -35,14 +35,11 @@ country_repository.save(country2)
 
 
 
-# user = User("Emilia", "Uzcategui", 10)
-# user_repository.update(user)
+
 
 # country = Country("Finland", 0)
 # country_repository.update(country)
 
-# visit_repo.save(Visit(User("","",1), Country("",1)))
-# visit_repo.save(Visit(User("","",2), Country("",2)))
 
 
 pdb.set_trace()

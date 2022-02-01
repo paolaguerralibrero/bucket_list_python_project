@@ -100,3 +100,27 @@ body{
     display: flex;
     flex-shrink: 40px;
   }
+
+  .flag{
+    width: 400px;
+    height: 300px;
+    margin: auto;
+  }
+
+  .flag img{
+    max-width: 100%;
+    max-height: 100%;
+  }
+
+  .country_name{
+    margin-top: 100px;
+    font-size: 40px;
+    margin-left: auto;
+  }
+
+  .continent{
+
+    font-size: 30px;
+    margin-left: 30%;
+    text-align: center;
+  }
