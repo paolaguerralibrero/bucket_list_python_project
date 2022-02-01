@@ -25,3 +25,8 @@ def delete(id):
     sql = "DELETE  FROM visit WHERE id = %s"
     values = [id]
     run_sql(sql, values)
+
+def update(visit):
+    sql = "UPDATE visit SET (user_id, country_id, visisted = (%s, %s, %s, %s) WHERE id = %s"
+    values = [visit.user.id, visit.country.id, visit.visited, visit.id]
+    run_sql(sql, values)

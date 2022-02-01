@@ -18,6 +18,12 @@ country = Country("Denmark", "Europe", "https://upload.wikimedia.org/wikipedia/c
 country_repository.save(country)
 country2 = Country("France", "Europe", "https://cdn.britannica.com/82/682-004-F0B47FCB/Flag-France.jpg")
 country_repository.save(country2)
+country3 = Country("Bulgaria", "Europe", "https://upload.wikimedia.org/wikipedia/commons/9/9a/Flag_of_Bulgaria.svg")
+country_repository.save(country3)
+country4 = Country("Italy", "Europe", "https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/Flag_of_Italy.svg/2560px-Flag_of_Italy.svg.png")
+country_repository.save(country4)
+country5 = Country("Spain", "Europe", "https://stuffedeyes.files.wordpress.com/2018/06/spain-2906824_960_720.png?w=640")
+country_repository.save(country5)
 
 
 # users = user_repository.select_all()

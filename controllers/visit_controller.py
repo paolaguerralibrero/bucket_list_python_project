@@ -31,3 +31,11 @@ def add_visited_country(user_id):
 def delete_visit(visit_id, user_id):
     visit_repository.delete(visit_id)
     return redirect('/users/' + user_id)
+
+# @visits_blueprint.route("/countries", methods= ['POST'])
+# def update_country(name, continent,flag):
+#     name = request.form['name']
+#     continent = request.form['continent']
+#     flag = request.form['flag']
+#     visit_repository.update()
+#     return render_template('/countries')

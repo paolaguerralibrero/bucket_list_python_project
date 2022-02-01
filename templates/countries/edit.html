@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <form action="/countries/{{country.id}}/edit" method="POST">
+        <div>
+        <label for="name">Country name:</label>
+        <input type="text" id="name" name="name" placeholder="{{country.name}}" required autofocus>
+
+        <label for="continent">Continent:</label>
+        <input type="text" id="continent" name="continent" placeholder="{{country.continent}}" required>
+
+        <label for="flag">Flag Url:</label>
+        <input type="text" id="flag" name="flag" placeholder="{{country.flag}}" required>
+
+
+        </div>
+        <button type="submit">Edit country</button>
+    </div>
+    </form>
+
+
+{% endblock %}
