@@ -1,6 +1,6 @@
 body{
     background: url('/static/images/background.jpg');
-    background-position: auto;
+    background-size: cover;
     font-family: "Helvetica", arial, sans-serif; font-size: 16px;
     padding: 0px;
     margin: 0px;
@@ -59,7 +59,7 @@ body{
   
   .trash-button{
     display: contents;
-    font-size: 65%;
+    font-size: 200%;
   }
   
   
@@ -70,7 +70,7 @@ body{
   .menu{
     display: flex;
     padding: 10px;
-    background-color: grey;
+    background-color: rgb(255, 0, 0);
     color: white;
   }
   
