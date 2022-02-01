@@ -96,3 +96,7 @@ body{
     margin: 0 auto;
   }
   
+  #flags {
+    display: flex;
+    flex-shrink: 40px;
+  }

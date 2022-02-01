@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 
 {% block content %}
-
+<h1>{{user.first_name + " " + user.last_name}}</h1>
 <h1>Visited countries:</h1>
 {% for visit in all_visits %}
 {% if visit.visited == True %}
