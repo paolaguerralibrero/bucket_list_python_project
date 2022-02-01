@@ -2,7 +2,7 @@
 
 {% block content %}
     <form action="/countries/{{country.id}}/edit" method="POST">
-        <div>
+        <div class= "edit-country">
         <label for="name">Country name:</label>
         <input type="text" id="name" name="name" placeholder="{{country.name}}" required autofocus>
 
@@ -11,11 +11,9 @@
 
         <label for="flag">Flag Url:</label>
         <input type="text" id="flag" name="flag" placeholder="{{country.flag}}" required>
-
-
         </div>
-        <button type="submit">Edit country</button>
-    </div>
+        <button type="submit" class="add-button">Edit country</button>
+    
     </form>
 
 

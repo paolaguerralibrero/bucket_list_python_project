@@ -68,21 +68,17 @@ body{
     padding: 10px;
     background-color: rgb(194, 129, 129);
     color: white;
+    font-family: 'Supermercado One', cursive, helvetica;
   }
   
   .menu li a{
     text-decoration: none;
   }
-  
-  .menu li a:visited{
-    color: white;
-  }
-  
+    
   .menu li{
     padding-right: 10px;
     list-style: none;
     color: white;
-    font-family: "Helvetica", arial, sans-serif; font-size: 14px;
   }
   
   .container{
@@ -127,12 +123,14 @@ body{
     margin-top: 100px;
     font-size: 40px;
     margin-left: auto;
+    color: white
   }
 
   .continent{
 
     font-size: 30px;
     text-align: center;
+    color: white
   }
 
   .page-header {
@@ -170,6 +168,15 @@ body{
 
   .edit-country {
     padding-top: 2px;
+    color: white;
+  }
+
+  .block-1 {
+    color: white;
+  }
+
+  .block-2 {
+    color: white;
   }
 
   
