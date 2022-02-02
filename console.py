@@ -24,6 +24,9 @@ country4 = Country("Italy", "Europe", "https://upload.wikimedia.org/wikipedia/co
 country_repository.save(country4)
 country5 = Country("Spain", "Europe", "https://stuffedeyes.files.wordpress.com/2018/06/spain-2906824_960_720.png?w=640")
 country_repository.save(country5)
+country6 = Country("Senegal", "Africa", "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Flag_of_Senegal.svg/250px-Flag_of_Senegal.svg.png")
+country_repository.save(country6)
+
 
 
 # users = user_repository.select_all()
